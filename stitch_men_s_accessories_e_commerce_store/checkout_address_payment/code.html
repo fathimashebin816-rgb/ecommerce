@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#111317;color:#e2e2e8;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "background": "#111317", "inverse-surface": "#e2e2e8", "surface-container": "#1e2024", "tertiary": "#efc984", "surface-bright": "#37393e", "surface": "#111317", "surface-tint": "#e9c349", "tertiary-container": "#d2ae6b", "on-primary-fixed": "#241a00", "outline": "#99907c", "on-primary-fixed-variant": "#574500", "on-secondary-fixed-variant": "#5a4300", "error": "#ffb4ab", "surface-variant": "#333539", "surface-container-highest": "#333539", "on-tertiary": "#412d00", "surface-dim": "#111317", "secondary-fixed-dim": "#eec14b", "surface-container-high": "#282a2e", "on-error-container": "#ffdad6", "primary-fixed-dim": "#e9c349", "on-primary-container": "#554300", "on-error": "#690005", "primary": "#f2ca50", "primary-container": "#d4af37", "on-secondary": "#3e2e00", "on-tertiary-fixed": "#261900", "on-secondary-container": "#362800", "inverse-primary": "#735c00", "surface-container-low": "#1a1c20", "secondary-container": "#b38b14", "inverse-on-surface": "#2f3035", "on-surface-variant": "#d0c5af", "on-secondary-fixed": "#251a00", "tertiary-fixed": "#ffdea4", "on-tertiary-container": "#5a4106", "primary-fixed": "#ffe088", "secondary": "#eec14b", "outline-variant": "#4d4635", "secondary-fixed": "#ffdf98", "on-background": "#e2e2e8", "on-surface": "#e2e2e8", "error-container": "#93000a", "surface-container-lowest": "#0c0e12", "tertiary-fixed-dim": "#e7c17c", "on-primary": "#3c2f00", "on-tertiary-fixed-variant": "#5c4308" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xs": "0.25rem", "gutter-desktop": "2rem", "margin-tablet": "2.5rem", "margin-desktop": "4rem", "space-xl": "2.5rem", "margin": "1.25rem", "space-3xl": "6rem", "space-lg": "1.5rem", "gutter": "1.5rem", "space-2xl": "4rem", "space-md": "1rem", "space-sm": "0.5rem" }, "fontFamily": { "display-hero-mobile": [ "Playfair Display" ], "price-lg": [ "Playfair Display" ], "price-md": [ "Plus Jakarta Sans" ], "headline-lg-mobile": [ "Playfair Display" ], "headline-lg": [ "Playfair Display" ], "headline-sm": [ "Plus Jakarta Sans" ], "label-sm": [ "Plus Jakarta Sans" ], "label-caps": [ "Plus Jakarta Sans" ], "display-hero": [ "Playfair Display" ], "headline-md": [ "Playfair Display" ], "body-md": [ "Plus Jakarta Sans" ], "title-md": [ "Plus Jakarta Sans" ], "body-sm": [ "Plus Jakarta Sans" ], "body-lg": [ "Plus Jakarta Sans" ] }, "fontSize": { "display-hero-mobile": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "price-lg": [ "24px", { "lineHeight": "32px", "letterSpacing": "0.02em", "fontWeight": "600" } ], "price-md": [ "16px", { "lineHeight": "24px", "letterSpacing": "0.03em", "fontWeight": "700" } ], "headline-lg-mobile": [ "28px", { "lineHeight": "36px", "letterSpacing": "0em", "fontWeight": "500" } ], "headline-lg": [ "40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "500" } ], "headline-sm": [ "20px", { "lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "600" } ], "label-sm": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" } ], "label-caps": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.14em", "fontWeight": "700" } ], "display-hero": [ "56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "headline-md": [ "28px", { "lineHeight": "36px", "letterSpacing": "0em", "fontWeight": "500" } ], "body-md": [ "14px", { "lineHeight": "22px", "letterSpacing": "0.01em", "fontWeight": "400" } ], "title-md": [ "16px", { "lineHeight": "24px", "letterSpacing": "0.02em", "fontWeight": "600" } ], "body-sm": [ "12px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "400" } ], "body-lg": [ "16px", { "lineHeight": "26px", "letterSpacing": "0.01em", "fontWeight": "400" } ] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 inset-x-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_4px_20px_rgba(0,0,0,0.6)] pt-safe"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><button aria-label="Go Back" class="w-11 h-11 flex items-center justify-center text-on-surface hover:text-primary transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">arrow_back_ios_new</span></button><img alt="Vanguard Atelier Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UTdkZfgdsu2jghuhVsBD2zb8Zejek-EPFTOIKjCBo5DwC-r9nSQcqoV4Z7D1V5BPizLRaL9ws3cQYv60z-EXT4Yjl9_cKEr_XUa_iUei9udzTqQhsFjd8NJUUD6G63o3P-6JZl1zXeIFsrqYBNtzXWkZ5sZJUcIp5cOSsS3S4tV1njjIrefV7KzxhG19X5idx75OepL8cxta0lt2ONZreSPa_qCicdy2FDDBHjh94pGIzdDl_Ji59NSA"/><h1 class="font-headline-sm text-headline-sm uppercase tracking-wider text-on-surface truncate">Checkout</h1></div><div class="flex items-center gap-space-xs shrink-0"><img alt="Profile" class="w-8 h-8 rounded-full object-cover p-[1px] bg-outline-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSspSv2On_Ea3K_YMytCyn7hpdYpTz3g5QM8rGCzrEDc0YgssH70yZgpC8C13YHqa5vb3lVP9-dcY6K0V9wx2af1KxSaxyNOt-VhQC75J2gsr1ysyHqGsdeb3rmbyQki4gUw5TNfYoiZ3Yjw6gnb10YeZSfNBWLy_2QO4DNNI-MVUvz_zyRuh-8qniKf5eUca--qwC_zku1aJjcs6OllvvNUDWvHawm-7-aX_B6tzkF2ZNAcZvEYBt"/></div></div></header><main class="flex flex-col relative w-full pt-16 pb-safe bg-surface min-h-screen"><div class="flex flex-col w-full px-margin pb-32 space-y-space-lg select-none">
+<!-- Stepper Indicator -->
+<div class="w-full pt-space-sm pb-space-xs">
+<div class="flex items-center justify-between relative px-2">
+<!-- Step 1: Address (Completed) -->
+<div class="flex flex-col items-center gap-1 z-10">
+<div class="w-7 h-7 rounded-full bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[16px] font-bold">check</span>
+</div>
+<span class="font-label-caps text-label-caps text-on-surface uppercase tracking-wider">Address</span>
+</div>
+<!-- Connecting Bar 1 (Active Fill) -->
+<div class="absolute left-[16%] right-[50%] top-3.5 h-[2px] bg-primary -z-0"></div>
+<!-- Step 2: Payment (Active) -->
+<div class="flex flex-col items-center gap-1 z-10">
+<div class="w-7 h-7 rounded-full bg-surface-container-high border-2 border-primary flex items-center justify-center">
+<div class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></div>
+</div>
+<span class="font-label-caps text-label-caps text-primary uppercase tracking-wider">Payment</span>
+</div>
+<!-- Connecting Bar 2 (Pending Fill) -->
+<div class="absolute left-[50%] right-[16%] top-3.5 h-[2px] bg-surface-container-highest -z-0"></div>
+<!-- Step 3: Confirmation -->
+<div class="flex flex-col items-center gap-1 z-10">
+<div class="w-7 h-7 rounded-full bg-surface-container-high flex items-center justify-center text-outline">
+<span class="font-label-caps text-label-caps text-outline">3</span>
+</div>
+<span class="font-label-caps text-label-caps text-outline uppercase tracking-wider">Confirm</span>
+</div>
+</div>
+</div>
+<!-- Delivery Address Vitrine Card -->
+<section class="bg-surface-container-low rounded-lg p-space-md shadow-md relative overflow-hidden">
+<div class="flex items-start justify-between gap-space-sm mb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">local_shipping</span>
+<span class="font-label-caps text-label-caps text-primary tracking-widest uppercase">Deliver To</span>
+</div>
+<button class="font-label-caps text-label-caps text-tertiary hover:text-primary transition-colors flex items-center gap-1">
+        Change / Edit
+        <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</button>
+</div>
+<div class="flex flex-col space-y-1">
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md text-on-surface">Vikramaditya Singhania</span>
+<span class="bg-surface-container-highest text-tertiary font-label-caps text-[9px] uppercase px-1.5 py-0.5 rounded">Default</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+        Penthouse 14B, The Imperial Towers, Tardeo, Mumbai, Maharashtra — 400034
+      </p>
+<div class="flex items-center gap-1 text-on-surface-variant font-body-sm text-body-sm pt-0.5">
+<span class="material-symbols-outlined text-[15px] text-outline">phone_iphone</span>
+<span>+91 98201 54321</span>
+</div>
+</div>
+</section>
+<!-- Payment Selection Accordions -->
+<section class="space-y-space-sm">
+<div class="flex items-center justify-between pb-space-xs">
+<h2 class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Payment Method</h2>
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[15px] text-primary">encrypted</span>
+<span class="font-label-caps text-label-caps">256-Bit SSL</span>
+</div>
+</div>
+<!-- OPTION 1: UPI Instant Payment (Recommended) -->
+<div class="bg-surface-container rounded-lg p-space-md shadow-sm transition-all duration-300" id="payment-upi">
+<label class="flex items-start justify-between cursor-pointer w-full select-none" onclick="selectPaymentMethod('upi')">
+<div class="flex items-start gap-space-sm">
+<input checked="" class="mt-1 accent-primary w-4 h-4 cursor-pointer" name="payment_method" type="radio" value="upi"/>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md text-on-surface">UPI Instant Checkout</span>
+<span class="bg-primary/10 text-primary px-2 py-0.5 rounded text-[10px] font-label-caps tracking-wider uppercase font-bold">Fastest</span>
+</div>
+<p class="font-body-sm text-body-sm text-tertiary mt-0.5">Instant ₹200 Privilege rebate unlocked</p>
+</div>
+</div>
+<div class="flex items-center gap-1 opacity-80">
+<span class="font-label-caps text-[10px] bg-surface-container-high px-1.5 py-0.5 rounded text-on-surface-variant">GPay</span>
+<span class="font-label-caps text-[10px] bg-surface-container-high px-1.5 py-0.5 rounded text-on-surface-variant">PhonePe</span>
+<span class="font-label-caps text-[10px] bg-surface-container-high px-1.5 py-0.5 rounded text-on-surface-variant">CRED</span>
+</div>
+</label>
+<!-- Expandable UPI details -->
+<div class="mt-space-md pt-space-sm space-y-space-sm" id="upi-details">
+<div class="grid grid-cols-4 gap-2">
+<button class="flex flex-col items-center justify-center p-2 rounded bg-surface-container-high hover:bg-surface-bright transition-colors group" type="button">
+<span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">account_balance_wallet</span>
+<span class="font-label-caps text-[10px] text-on-surface mt-1">GPay</span>
+</button>
+<button class="flex flex-col items-center justify-center p-2 rounded bg-surface-container-high hover:bg-surface-bright transition-colors group" type="button">
+<span class="material-symbols-outlined text-secondary group-hover:scale-110 transition-transform">bolt</span>
+<span class="font-label-caps text-[10px] text-on-surface mt-1">PhonePe</span>
+</button>
+<button class="flex flex-col items-center justify-center p-2 rounded bg-surface-container-high hover:bg-surface-bright transition-colors group" type="button">
+<span class="material-symbols-outlined text-tertiary group-hover:scale-110 transition-transform">toll</span>
+<span class="font-label-caps text-[10px] text-on-surface mt-1">Paytm</span>
+</button>
+<button class="flex flex-col items-center justify-center p-2 rounded bg-surface-container-high hover:bg-surface-bright transition-colors group" type="button">
+<span class="material-symbols-outlined text-primary-fixed-dim group-hover:scale-110 transition-transform">diamond</span>
+<span class="font-label-caps text-[10px] text-on-surface mt-1">CRED</span>
+</button>
+</div>
+<div class="relative flex items-center justify-center my-2">
+<div class="w-full h-[1px] bg-surface-variant"></div>
+<span class="absolute bg-surface-container px-2 font-label-caps text-[10px] text-outline tracking-widest uppercase">Or Enter VPA</span>
+</div>
+<div class="flex gap-2">
+<div class="relative flex-1">
+<input class="w-full bg-surface-container-lowest text-on-surface font-body-md text-body-md px-3 py-2.5 rounded focus:outline-none focus:ring-1 focus:ring-primary placeholder-outline" placeholder="username@bank" type="text" value="vikram@okhdfcbank"/>
+<span class="absolute right-3 top-2.5 text-primary text-[14px] flex items-center">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</span>
+</div>
+<button class="bg-surface-container-highest text-on-surface px-4 py-2.5 rounded font-label-caps text-label-caps tracking-wider uppercase hover:bg-surface-bright transition-colors" type="button">
+            Verify
+          </button>
+</div>
+</div>
+</div>
+<!-- OPTION 2: Credit / Debit Card -->
+<div class="bg-surface-container rounded-lg p-space-md shadow-sm transition-all duration-300" id="payment-card">
+<label class="flex items-start justify-between cursor-pointer w-full select-none" onclick="selectPaymentMethod('card')">
+<div class="flex items-start gap-space-sm">
+<input class="mt-1 accent-primary w-4 h-4 cursor-pointer" name="payment_method" type="radio" value="card"/>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Credit / Debit Card</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Visa, Mastercard, American Express, RuPay</p>
+</div>
+</div>
+<div class="flex items-center gap-1.5 text-outline">
+<span class="material-symbols-outlined text-[20px]">credit_card</span>
+</div>
+</label>
+<!-- Expandable Card Inputs -->
+<div class="mt-space-md pt-space-sm space-y-space-sm hidden" id="card-details">
+<div class="space-y-1">
+<label class="font-label-caps text-[11px] text-on-surface-variant uppercase">Cardholder Name</label>
+<input class="w-full bg-surface-container-lowest text-on-surface font-body-md text-body-md px-3 py-2.5 rounded focus:outline-none focus:ring-1 focus:ring-primary" type="text" value="Vikramaditya Singhania"/>
+</div>
+<div class="space-y-1">
+<label class="font-label-caps text-[11px] text-on-surface-variant uppercase">Card Number</label>
+<div class="relative">
+<input class="w-full bg-surface-container-lowest text-on-surface font-body-md text-body-md px-3 py-2.5 rounded tracking-widest focus:outline-none focus:ring-1 focus:ring-primary" placeholder="4242 •••• •••• 1024" type="text"/>
+<span class="absolute right-3 top-2.5 font-label-caps text-primary text-[10px] uppercase font-bold tracking-wider">VISA</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="space-y-1">
+<label class="font-label-caps text-[11px] text-on-surface-variant uppercase">Valid Thru</label>
+<input class="w-full bg-surface-container-lowest text-on-surface font-body-md text-body-md px-3 py-2.5 rounded text-center focus:outline-none focus:ring-1 focus:ring-primary" placeholder="MM / YY" type="text"/>
+</div>
+<div class="space-y-1">
+<div class="flex items-center justify-between">
+<label class="font-label-caps text-[11px] text-on-surface-variant uppercase">CVV</label>
+<span class="material-symbols-outlined text-[14px] text-outline cursor-pointer">help</span>
+</div>
+<input class="w-full bg-surface-container-lowest text-on-surface font-body-md text-body-md px-3 py-2.5 rounded text-center tracking-widest focus:outline-none focus:ring-1 focus:ring-primary" maxlength="4" placeholder="•••" type="password"/>
+</div>
+</div>
+<!-- RBI Tokenization Consent -->
+<label class="flex items-start gap-2.5 pt-1 cursor-pointer select-none">
+<input checked="" class="mt-0.5 accent-primary w-4 h-4 rounded cursor-pointer" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface-variant leading-tight">
+            Securely tokenize card as per RBI guidelines for instant future checkout.
+          </span>
+</label>
+</div>
+</div>
+<!-- OPTION 3: Net Banking -->
+<div class="bg-surface-container rounded-lg p-space-md shadow-sm transition-all duration-300" id="payment-netbanking">
+<label class="flex items-start justify-between cursor-pointer w-full select-none" onclick="selectPaymentMethod('netbanking')">
+<div class="flex items-start gap-space-sm">
+<input class="mt-1 accent-primary w-4 h-4 cursor-pointer" name="payment_method" type="radio" value="netbanking"/>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Net Banking</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Direct gateway across all major premier banks</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px]">account_balance</span>
+</label>
+<!-- Expandable Bank Options -->
+<div class="mt-space-md pt-space-sm space-y-space-sm hidden" id="netbanking-details">
+<div class="grid grid-cols-3 gap-2">
+<button class="py-2 px-1 text-center rounded bg-surface-container-high hover:bg-surface-bright font-label-caps text-[11px] text-on-surface" type="button">HDFC Bank</button>
+<button class="py-2 px-1 text-center rounded bg-surface-container-high hover:bg-surface-bright font-label-caps text-[11px] text-on-surface" type="button">ICICI Bank</button>
+<button class="py-2 px-1 text-center rounded bg-surface-container-high hover:bg-surface-bright font-label-caps text-[11px] text-on-surface" type="button">SBI</button>
+<button class="py-2 px-1 text-center rounded bg-surface-container-high hover:bg-surface-bright font-label-caps text-[11px] text-on-surface" type="button">Axis Bank</button>
+<button class="py-2 px-1 text-center rounded bg-surface-container-high hover:bg-surface-bright font-label-caps text-[11px] text-on-surface" type="button">Kotak</button>
+<button class="py-2 px-1 text-center rounded bg-surface-container-high hover:bg-surface-bright font-label-caps text-[11px] text-tertiary" type="button">More +</button>
+</div>
+</div>
+</div>
+<!-- OPTION 4: No-Cost EMI -->
+<div class="bg-surface-container rounded-lg p-space-md shadow-sm transition-all duration-300" id="payment-emi">
+<label class="flex items-start justify-between cursor-pointer w-full select-none" onclick="selectPaymentMethod('emi')">
+<div class="flex items-start gap-space-sm">
+<input class="mt-1 accent-primary w-4 h-4 cursor-pointer" name="payment_method" type="radio" value="emi"/>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md text-on-surface">Bespoke No-Cost EMI</span>
+<span class="bg-secondary-container text-on-secondary-container px-1.5 py-0.5 rounded text-[10px] font-label-caps tracking-wider uppercase font-bold">0% Interest</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Plans starting from ₹7,530 / month</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px]">calendar_month</span>
+</label>
+<!-- Expandable EMI Tenures -->
+<div class="mt-space-md pt-space-sm space-y-2 hidden" id="emi-details">
+<div class="flex items-center justify-between p-2.5 rounded bg-surface-container-high">
+<div>
+<div class="font-title-md text-title-md text-on-surface">₹7,530 / mo</div>
+<div class="font-body-sm text-body-sm text-outline">3 Months Plan • 0% Interest</div>
+</div>
+<span class="material-symbols-outlined text-primary text-[20px]">radio_button_checked</span>
+</div>
+<div class="flex items-center justify-between p-2.5 rounded bg-surface-container-low opacity-80">
+<div>
+<div class="font-title-md text-title-md text-on-surface">₹3,765 / mo</div>
+<div class="font-body-sm text-body-sm text-outline">6 Months Plan • Standard Interest</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px]">radio_button_unchecked</span>
+</div>
+</div>
+</div>
+<!-- OPTION 5: Cash on Delivery (COD) -->
+<div class="bg-surface-container rounded-lg p-space-md shadow-sm transition-all duration-300" id="payment-cod">
+<label class="flex items-start justify-between cursor-pointer w-full select-none" onclick="selectPaymentMethod('cod')">
+<div class="flex items-start gap-space-sm">
+<input class="mt-1 accent-primary w-4 h-4 cursor-pointer" name="payment_method" type="radio" value="cod"/>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Cash on Delivery</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">OTP verification requested upon delivery</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px]">payments</span>
+</label>
+<div class="mt-space-md pt-space-xs hidden" id="cod-details">
+<p class="font-body-sm text-body-sm text-on-surface-variant bg-surface-container-lowest p-2.5 rounded">
+          Please note: Cash handling limit is ₹50,000. An SMS containing an authentication security PIN will be delivered to your registered mobile prior to package handover.
+        </p>
+</div>
+</div>
+</section>
+<!-- Order Summary Accordion -->
+<section class="bg-surface-container-low rounded-lg p-space-md shadow-md">
+<button class="w-full flex items-center justify-between select-none" onclick="toggleAccordion('order-summary-content', 'summary-chevron')">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-[20px]">inventory_2</span>
+<span class="font-title-md text-title-md text-on-surface">Atelier Vault (3 Items)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-price-md text-price-md text-primary">₹22,590</span>
+<span class="material-symbols-outlined text-outline transition-transform duration-300" id="summary-chevron">expand_more</span>
+</div>
+</button>
+<div class="mt-space-md pt-space-sm space-y-space-md hidden" id="order-summary-content">
+<!-- Item 1 -->
+<div class="flex items-center gap-space-sm">
+<img class="w-14 h-14 object-cover rounded bg-surface-container-high shrink-0" data-alt="Bespoke handcrafted Tuscan full-grain leather watch roll in deep mahogany brown with brass hardware displayed on dark basalt pedestal in warm luxury studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChfP7LtjX3zy1JQxYrAJljzNX4A2fxNkMz3jqZDp8f26CLEjf4cXBoKdlOKGes7YQjNg3B8jxyXDBTzWJObNCpIR3Sf-y0RtI0pulse_FdNLNTRnee8jYhYbyFHrkYfxwXJv0zVO1J2PkdXTBtYnFf4uVlor5I8RV6fdWIpWfXtA87dW2H7LcqCcBzHSEuxVDd97D9_DnZWkAVDrP1W0Zr3lXzWK8QC2H6W4bcHD73e8KHJ6JqO8yg"/>
+<div class="flex-1 min-w-0">
+<h4 class="font-title-md text-title-md text-on-surface truncate">Vanguard Chrono Watch Roll</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Tuscan Mahogany • Triple Slot</p>
+<div class="font-price-md text-price-md text-on-surface mt-0.5">₹11,490</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex items-center gap-space-sm">
+<img class="w-14 h-14 object-cover rounded bg-surface-container-high shrink-0" data-alt="Minimalist titanium and obsidian signet ring crafted with precision satin-brushed finish set against dramatic dark atmospheric backdrop with golden rim lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcqXKVyZO9lKutF53hbC-yjXPzR0YBXqh51jifZychPBswt7GXRR4Mxh8B9WYLKJRLz4q4FT4Y1IvTSLbNjpQuSRHYotkMdrIHPZ7kGAEUPbVNKlNm2Wa9NgOMTxRlBI2suWslnuMkdBsnjgrHSsIdxp-AHr9nMlgVxdOPW9ypd5CPVA-o--O4kce9ocu7Xo0nGu0IRD9r8R3xNofluaIB9LiroLAtB3Tg0pMTuH6thFX3lpoCy0Ud"/>
+<div class="flex-1 min-w-0">
+<h4 class="font-title-md text-title-md text-on-surface truncate">Aegis Obsidian Signet Ring</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Grade 5 Titanium • Size 10</p>
+<div class="font-price-md text-price-md text-on-surface mt-0.5">₹6,800</div>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="flex items-center gap-space-sm">
+<img class="w-14 h-14 object-cover rounded bg-surface-container-high shrink-0" data-alt="Refined hand-finished brass money clip with subtle knurled grip detailing placed on fine dark suede texture in studio setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjoD6xWRbUDngHOKHw9wdMBy8nC0dTltGJ0ePdVm6m7icbZYyqjmKfVI7Rov-bN69N8EOyzYfzL56mzVQ_XNQyFjOH12ZBqIiq41dVXhPSsWGWcztDgvWxDVyM-1ZxfCxezXOskt0OBI2UE8iY9PC7s76hgzfG6vM6niu48prAQRPCHAZC1vrrkJFFE7LWV9xJQou-dxe9GgdzMl3csUAqh0NNEeh0SX6O3SnOl3cPg9cx_cSig5aF"/>
+<div class="flex-1 min-w-0">
+<h4 class="font-title-md text-title-md text-on-surface truncate">Brushed Patina Money Clip</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Aged Brass • Monogrammed 'VS'</p>
+<div class="font-price-md text-price-md text-on-surface mt-0.5">₹4,500</div>
+</div>
+</div>
+<!-- Price Breakdown -->
+<div class="space-y-1.5 pt-space-xs">
+<div class="flex justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span>Subtotal</span>
+<span>₹22,790</span>
+</div>
+<div class="flex justify-between font-body-sm text-body-sm text-tertiary">
+<span>UPI Atelier Privilege Discount</span>
+<span>- ₹200</span>
+</div>
+<div class="flex justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span>Complimentary White-Glove Shipping</span>
+<span class="text-primary font-bold uppercase text-[10px] tracking-wider">FREE</span>
+</div>
+<div class="w-full h-[1px] bg-surface-variant my-2"></div>
+<div class="flex justify-between items-baseline font-title-md text-title-md text-on-surface">
+<span>Total Payable Amount</span>
+<span class="font-price-lg text-price-lg text-primary">₹22,590</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust & Security Pillars -->
+<section class="grid grid-cols-3 gap-2 py-space-xs text-center">
+<div class="flex flex-col items-center p-2 rounded bg-surface-container-lowest">
+<span class="material-symbols-outlined text-primary text-[22px] mb-1">verified_user</span>
+<span class="font-label-caps text-[10px] text-on-surface uppercase tracking-wider font-semibold">100% Genuine</span>
+<span class="font-body-sm text-[10px] text-outline">Artisanal Certified</span>
+</div>
+<div class="flex flex-col items-center p-2 rounded bg-surface-container-lowest">
+<span class="material-symbols-outlined text-primary text-[22px] mb-1">lock</span>
+<span class="font-label-caps text-[10px] text-on-surface uppercase tracking-wider font-semibold">Encrypted</span>
+<span class="font-body-sm text-[10px] text-outline">RBI Mandate Ready</span>
+</div>
+<div class="flex flex-col items-center p-2 rounded bg-surface-container-lowest">
+<span class="material-symbols-outlined text-primary text-[22px] mb-1">published_with_changes</span>
+<span class="font-label-caps text-[10px] text-on-surface uppercase tracking-wider font-semibold">Easy Returns</span>
+<span class="font-body-sm text-[10px] text-outline">7-Day Atelier Policy</span>
+</div>
+</section>
+<!-- Sticky Bottom Checkout Bar -->
+<div class="fixed bottom-0 inset-x-0 bg-surface-container-lowest/95 backdrop-blur-xl shadow-[0_-8px_30px_rgba(0,0,0,0.8)] px-margin py-3 pb-safe z-40">
+<div class="flex items-center justify-between gap-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-1 text-on-surface-variant font-label-caps text-[10px] uppercase tracking-wider">
+<span class="material-symbols-outlined text-[13px] text-primary">lock</span>
+<span>Payable Now</span>
+</div>
+<div class="font-price-lg text-price-lg text-primary tracking-tight">₹22,590</div>
+</div>
+<button class="flex-1 h-12 bg-primary hover:bg-tertiary active:scale-[0.98] transition-all text-on-primary font-headline-sm text-title-md uppercase tracking-[0.14em] font-bold flex items-center justify-center gap-2 shadow-lg" id="order-submit-btn" onclick="triggerOrderSuccess()">
+<span>Place Order</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  function selectPaymentMethod(type) {
+    const methods = ['upi', 'card', 'netbanking', 'emi', 'cod'];
+    methods.forEach(m => {
+      const details = document.getElementById(m + '-details');
+      const container = document.getElementById('payment-' + m);
+      const radio = container.querySelector('input[type="radio"]');
+      
+      if (m === type) {
+        details?.classList.remove('hidden');
+        if (radio) radio.checked = true;
+        container.classList.add('bg-surface-container-high');
+        container.classList.remove('bg-surface-container');
+      } else {
+        details?.classList.add('hidden');
+        if (radio) radio.checked = false;
+        container.classList.remove('bg-surface-container-high');
+        container.classList.add('bg-surface-container');
+      }
+    });
+  }
+
+  function toggleAccordion(contentId, chevronId) {
+    const content = document.getElementById(contentId);
+    const chevron = document.getElementById(chevronId);
+    if (!content) return;
+    
+    if (content.classList.contains('hidden')) {
+      content.classList.remove('hidden');
+      chevron?.classList.add('rotate-180');
+    } else {
+      content.classList.add('hidden');
+      chevron?.classList.remove('rotate-180');
+    }
+  }
+
+  function triggerOrderSuccess() {
+    const btn = document.getElementById('order-submit-btn');
+    if (!btn) return;
+    btn.innerHTML = `<span class="material-symbols-outlined text-[20px] animate-spin">progress_activity</span><span>Authenticating...</span>`;
+    setTimeout(() => {
+      btn.innerHTML = `<span class="material-symbols-outlined text-[20px]">check_circle</span><span>Confirmed!</span>`;
+      btn.classList.remove('bg-primary');
+      btn.classList.add('bg-tertiary-container');
+    }, 1200);
+  }
+</script></main></body></html>

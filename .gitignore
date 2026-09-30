@@ -1,0 +1,7 @@
+node_modules/
+.next/
+/production-build/
+out/
+.env*
+!.env.example
+*.tsbuildinfo

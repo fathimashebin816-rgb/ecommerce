@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#111317;color:#e2e2e8;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "background": "#111317", "inverse-surface": "#e2e2e8", "surface-container": "#1e2024", "tertiary": "#efc984", "surface-bright": "#37393e", "surface": "#111317", "surface-tint": "#e9c349", "tertiary-container": "#d2ae6b", "on-primary-fixed": "#241a00", "outline": "#99907c", "on-primary-fixed-variant": "#574500", "on-secondary-fixed-variant": "#5a4300", "error": "#ffb4ab", "surface-variant": "#333539", "surface-container-highest": "#333539", "on-tertiary": "#412d00", "surface-dim": "#111317", "secondary-fixed-dim": "#eec14b", "surface-container-high": "#282a2e", "on-error-container": "#ffdad6", "primary-fixed-dim": "#e9c349", "on-primary-container": "#554300", "on-error": "#690005", "primary": "#f2ca50", "primary-container": "#d4af37", "on-secondary": "#3e2e00", "on-tertiary-fixed": "#261900", "on-secondary-container": "#362800", "inverse-primary": "#735c00", "surface-container-low": "#1a1c20", "secondary-container": "#b38b14", "inverse-on-surface": "#2f3035", "on-surface-variant": "#d0c5af", "on-secondary-fixed": "#251a00", "tertiary-fixed": "#ffdea4", "on-tertiary-container": "#5a4106", "primary-fixed": "#ffe088", "secondary": "#eec14b", "outline-variant": "#4d4635", "secondary-fixed": "#ffdf98", "on-background": "#e2e2e8", "on-surface": "#e2e2e8", "error-container": "#93000a", "surface-container-lowest": "#0c0e12", "tertiary-fixed-dim": "#e7c17c", "on-primary": "#3c2f00", "on-tertiary-fixed-variant": "#5c4308" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xs": "0.25rem", "gutter-desktop": "2rem", "margin-tablet": "2.5rem", "margin-desktop": "4rem", "space-xl": "2.5rem", "margin": "1.25rem", "space-3xl": "6rem", "space-lg": "1.5rem", "gutter": "1.5rem", "space-2xl": "4rem", "space-md": "1rem", "space-sm": "0.5rem" }, "fontFamily": { "display-hero-mobile": [ "Playfair Display" ], "price-lg": [ "Playfair Display" ], "price-md": [ "Plus Jakarta Sans" ], "headline-lg-mobile": [ "Playfair Display" ], "headline-lg": [ "Playfair Display" ], "headline-sm": [ "Plus Jakarta Sans" ], "label-sm": [ "Plus Jakarta Sans" ], "label-caps": [ "Plus Jakarta Sans" ], "display-hero": [ "Playfair Display" ], "headline-md": [ "Playfair Display" ], "body-md": [ "Plus Jakarta Sans" ], "title-md": [ "Plus Jakarta Sans" ], "body-sm": [ "Plus Jakarta Sans" ], "body-lg": [ "Plus Jakarta Sans" ] }, "fontSize": { "display-hero-mobile": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "price-lg": [ "24px", { "lineHeight": "32px", "letterSpacing": "0.02em", "fontWeight": "600" } ], "price-md": [ "16px", { "lineHeight": "24px", "letterSpacing": "0.03em", "fontWeight": "700" } ], "headline-lg-mobile": [ "28px", { "lineHeight": "36px", "letterSpacing": "0em", "fontWeight": "500" } ], "headline-lg": [ "40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "500" } ], "headline-sm": [ "20px", { "lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "600" } ], "label-sm": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" } ], "label-caps": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.14em", "fontWeight": "700" } ], "display-hero": [ "56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "headline-md": [ "28px", { "lineHeight": "36px", "letterSpacing": "0em", "fontWeight": "500" } ], "body-md": [ "14px", { "lineHeight": "22px", "letterSpacing": "0.01em", "fontWeight": "400" } ], "title-md": [ "16px", { "lineHeight": "24px", "letterSpacing": "0.02em", "fontWeight": "600" } ], "body-sm": [ "12px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "400" } ], "body-lg": [ "16px", { "lineHeight": "26px", "letterSpacing": "0.01em", "fontWeight": "400" } ] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 inset-x-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_4px_20px_rgba(0,0,0,0.6)] pt-safe"><div class="h-24 flex flex-col justify-between"><div class="h-7 bg-surface-container-lowest flex items-center justify-center px-margin overflow-hidden"><p class="font-label-caps text-label-caps text-tertiary uppercase tracking-widest text-center truncate">FREE SHIPPING ABOVE ₹999 • EASY RETURNS • SECURE PAYMENT</p></div><div class="h-[68px] px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm shrink-0"><img alt="Vanguard Atelier Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UTdkZfgdsu2jghuhVsBD2zb8Zejek-EPFTOIKjCBo5DwC-r9nSQcqoV4Z7D1V5BPizLRaL9ws3cQYv60z-EXT4Yjl9_cKEr_XUa_iUei9udzTqQhsFjd8NJUUD6G63o3P-6JZl1zXeIFsrqYBNtzXWkZ5sZJUcIp5cOSsS3S4tV1njjIrefV7KzxhG19X5idx75OepL8cxta0lt2ONZreSPa_qCicdy2FDDBHjh94pGIzdDl_Ji59NSA"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm uppercase tracking-wider text-on-surface leading-none">Vanguard</span><span class="font-label-caps text-label-caps uppercase tracking-widest text-primary">Atelier</span></div></div><div class="flex items-center gap-space-xs shrink-0"><button aria-label="Search" class="w-11 h-11 flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined text-[22px]">search</span></button><a aria-label="Wishlist" class="w-11 h-11 relative flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors" data-path="wishlist" href="#"><span class="material-symbols-outlined text-[22px]">favorite</span><span class="absolute top-2 right-2 min-w-[16px] h-4 px-1 bg-primary text-on-primary font-label-caps text-[10px] leading-4 text-center font-bold">2</span></a><a aria-label="Shopping Bag" class="w-11 h-11 relative flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors" data-path="bag" href="#"><span class="material-symbols-outlined text-[22px]">shopping_bag</span><span class="absolute top-2 right-2 min-w-[16px] h-4 px-1 bg-primary text-on-primary font-label-caps text-[10px] leading-4 text-center font-bold">3</span></a><div class="w-11 h-11 flex items-center justify-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover p-[1px] bg-outline-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSspSv2On_Ea3K_YMytCyn7hpdYpTz3g5QM8rGCzrEDc0YgssH70yZgpC8C13YHqa5vb3lVP9-dcY6K0V9wx2af1KxSaxyNOt-VhQC75J2gsr1ysyHqGsdeb3rmbyQki4gUw5TNfYoiZ3Yjw6gnb10YeZSfNBWLy_2QO4DNNI-MVUvz_zyRuh-8qniKf5eUca--qwC_zku1aJjcs6OllvvNUDWvHawm-7-aX_B6tzkF2ZNAcZvEYBt"/></div></div></div></div></header><main class="flex flex-col relative w-full pt-24 pb-20 bg-surface min-h-screen"><div class="flex flex-col w-full pb-16">
+<!-- Top Category Intro Header -->
+<section class="flex flex-col px-margin pt-4 pb-3">
+<!-- Breadcrumb & Stock Pill -->
+<div class="flex items-center justify-between gap-space-sm mb-2">
+<nav aria-label="Breadcrumb" class="flex items-center gap-1.5 text-outline text-label-sm font-label-sm">
+<span class="hover:text-primary transition-colors cursor-pointer">Home</span>
+<span class="material-symbols-outlined text-[12px] text-outline">chevron_right</span>
+<span class="text-tertiary">Watches</span>
+</nav>
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-surface-container-high text-tertiary text-label-caps font-label-caps uppercase tracking-wider">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+        48 Handcrafted Pieces
+      </span>
+</div>
+<!-- Category Title -->
+<div class="flex flex-col">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface font-medium tracking-tight">Timepieces &amp; Horology</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Swiss-grade calibration, exhibition casebacks, and bespoke Horween leather accoutrements.</p>
+</div>
+</section>
+<!-- Sticky Interactive Filter & Control Ribbon -->
+<section class="sticky top-24 z-30 bg-surface/95 backdrop-blur-md shadow-md py-2.5 px-margin flex flex-col gap-2">
+<!-- Primary Filter & Sort Controls -->
+<div class="flex items-center justify-between gap-space-sm">
+<!-- Filter Trigger Button -->
+<button aria-label="Open Filter Drawer" class="flex items-center gap-2 h-10 px-3.5 bg-surface-container-high rounded text-on-surface font-label-caps text-label-caps uppercase tracking-widest active:scale-95 transition-transform" id="openFilterBtn">
+<span class="material-symbols-outlined text-[18px] text-primary">tune</span>
+<span>Filter</span>
+<span class="w-4 h-4 rounded-full bg-primary text-on-primary font-bold text-[10px] flex items-center justify-center">3</span>
+</button>
+<!-- Sort Selection Dropdown Simulation -->
+<div class="relative flex-1 max-w-[210px]">
+<button class="w-full h-10 px-3 bg-surface-container-low rounded flex items-center justify-between text-on-surface font-label-caps text-label-caps uppercase tracking-wider active:bg-surface-container transition-colors" id="sortDropdownTrigger">
+<span class="truncate flex items-center gap-1.5 text-on-surface-variant">
+<span class="text-[10px] text-outline">SORT:</span>
+<span class="text-on-surface font-semibold truncate" id="currentSortLabel">Featured</span>
+</span>
+<span class="material-symbols-outlined text-[18px] text-tertiary">expand_more</span>
+</button>
+<!-- Dropdown Menu Sheet -->
+<div class="hidden absolute top-11 right-0 w-48 bg-surface-container-high rounded shadow-xl py-1 z-40" id="sortMenu">
+<button class="w-full text-left px-3.5 py-2 text-label-caps font-label-caps text-primary bg-surface-container-highest/40 flex items-center justify-between" data-sort="Featured">
+            Featured <span class="material-symbols-outlined text-[14px]">check</span>
+</button>
+<button class="w-full text-left px-3.5 py-2 text-label-caps font-label-caps text-on-surface hover:text-primary transition-colors" data-sort="Price: Low to High">
+            Price: Low to High
+          </button>
+<button class="w-full text-left px-3.5 py-2 text-label-caps font-label-caps text-on-surface hover:text-primary transition-colors" data-sort="Price: High to Low">
+            Price: High to Low
+          </button>
+<button class="w-full text-left px-3.5 py-2 text-label-caps font-label-caps text-on-surface hover:text-primary transition-colors" data-sort="Top Rated">
+            Top Rated
+          </button>
+</div>
+</div>
+</div>
+<!-- Quick Pill Horizon Scroller -->
+<div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar py-0.5">
+<button class="filter-pill shrink-0 px-3 py-1 bg-surface-container-highest text-primary font-label-caps text-label-caps uppercase rounded tracking-wider flex items-center gap-1" data-active="true">
+<span>Automatic</span>
+<span class="material-symbols-outlined text-[13px]">close</span>
+</button>
+<button class="filter-pill shrink-0 px-3 py-1 bg-surface-container-highest text-primary font-label-caps text-label-caps uppercase rounded tracking-wider flex items-center gap-1" data-active="true">
+<span>Chronograph</span>
+<span class="material-symbols-outlined text-[13px]">close</span>
+</button>
+<button class="filter-pill shrink-0 px-3 py-1 bg-surface-container-low text-on-surface-variant font-label-caps text-label-caps uppercase rounded tracking-wider flex items-center gap-1" data-active="false">
+<span>Leather Strap</span>
+<span class="material-symbols-outlined text-[13px] opacity-40">add</span>
+</button>
+<button class="filter-pill shrink-0 px-3 py-1 bg-surface-container-low text-on-surface-variant font-label-caps text-label-caps uppercase rounded tracking-wider flex items-center gap-1" data-active="false">
+<span>100m Depth</span>
+<span class="material-symbols-outlined text-[13px] opacity-40">add</span>
+</button>
+<button class="filter-pill shrink-0 px-3 py-1 bg-surface-container-low text-on-surface-variant font-label-caps text-label-caps uppercase rounded tracking-wider flex items-center gap-1" data-active="false">
+<span>Titanium</span>
+<span class="material-symbols-outlined text-[13px] opacity-40">add</span>
+</button>
+</div>
+</section>
+<!-- Filter Summary Micro-Ribbon -->
+<section class="px-margin py-2 flex items-center justify-between text-label-sm font-label-sm text-outline">
+<div class="flex items-center gap-1">
+<span class="text-tertiary">Range:</span>
+<span class="text-on-surface font-medium">₹1,999 – ₹45,000</span>
+<span class="mx-1 text-surface-bright">•</span>
+<span class="text-tertiary">Rating:</span>
+<span class="text-on-surface font-medium">4★+</span>
+</div>
+<button class="text-tertiary hover:underline text-label-caps font-label-caps uppercase">Clear All</button>
+</section>
+<!-- Responsive 2-Column Luxury Vitrine Product Grid -->
+<main class="grid grid-cols-2 gap-2.5 px-margin mt-1">
+<!-- PRODUCT 1 -->
+<article class="group relative flex flex-col bg-surface-container-low rounded overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+<!-- Media Stage Frame -->
+<div class="relative w-full aspect-[4/5] bg-surface-container-lowest overflow-hidden">
+<img alt="Vanguard Chronograph Automatique 41mm" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out" data-alt="Editorial close up macro photograph of a luxury Vanguard 41mm automatic chronograph watch with champagne gold dial, sapphire crystal glass, three sub-dials, polished stainless steel case and a rich dark brown Horween leather strap set on matte black obsidian stone background, dramatic moody luxury studio lighting with subtle gold rim reflections." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAF1rL7ndKuoi7jOlrBGWjSky-HQ4sue-REjRUIu1nTHH2AtJW8cuypEYQ_a3kLY1KHTbMVQ8540l45L7cfpA0C4HpbroVbFCahBlHRG4no3bGBxjFk0D1PZ90tmEIpquQ8DHL1-a9laCnNpNEgC1doLn7lmn_0TxVNbOMFqHIetRp8QmBHyQp4LAuTil67wOiFM6aRUt0YfRJY2H8jHb8GZA6qD2AZ4vVqsZsYQ2Bi7zzHemsQsGoN"/>
+<!-- Top Overlay Badges -->
+<div class="absolute top-2 left-2 flex flex-col gap-1 items-start z-10">
+<span class="px-1.5 py-0.5 bg-surface-container-lowest/90 text-primary font-label-caps text-[9px] uppercase tracking-widest font-bold backdrop-blur-sm rounded-sm">
+            BESTSELLER
+          </span>
+<span class="px-1.5 py-0.5 bg-secondary-container text-on-secondary font-label-caps text-[9px] font-bold rounded-sm">
+            -21%
+          </span>
+</div>
+<!-- Wishlist Floating Icon -->
+<button aria-label="Add to Wishlist" class="wishlist-btn absolute top-2 right-2 w-7 h-7 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm text-on-surface-variant hover:text-primary flex items-center justify-center transition-colors active:scale-90 z-10">
+<span class="material-symbols-outlined text-[16px]">favorite</span>
+</button>
+<!-- Bottom Quick Add overlay pill -->
+<div class="absolute bottom-2 inset-x-2 flex justify-center opacity-95">
+<button class="add-bag-btn w-full h-7 bg-primary text-on-primary font-label-caps text-[10px] uppercase font-bold tracking-wider rounded flex items-center justify-center gap-1 active:bg-secondary transition-colors">
+<span class="material-symbols-outlined text-[13px]">shopping_bag</span>
+<span>Quick Bag</span>
+</button>
+</div>
+</div>
+<!-- Detail Matrix -->
+<div class="flex flex-col p-2.5 flex-1 justify-between gap-1">
+<div>
+<div class="flex items-center gap-1 text-[11px] text-tertiary">
+<span class="material-symbols-outlined text-[13px] fill-current" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold font-body-sm text-on-surface text-[11px]">4.9</span>
+<span class="text-outline text-[10px]">(84)</span>
+</div>
+<h2 class="font-headline-sm text-[13px] leading-tight text-on-surface font-semibold line-clamp-2 mt-0.5">
+            Vanguard Chronograph Automatique 41mm
+          </h2>
+</div>
+<div class="flex flex-col pt-1">
+<div class="flex items-baseline gap-1.5">
+<span class="font-price-md text-price-md text-primary font-bold">₹18,900</span>
+<span class="font-body-sm text-outline line-through text-[11px]">₹24,000</span>
+</div>
+<span class="font-label-caps text-[9px] text-tertiary uppercase tracking-wider mt-0.5">Calibre 8215 • 42hr Reserve</span>
+</div>
+</div>
+</article>
+<!-- PRODUCT 2 -->
+<article class="group relative flex flex-col bg-surface-container-low rounded overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="relative w-full aspect-[4/5] bg-surface-container-lowest overflow-hidden">
+<img alt="Obsidian Minimalist Dress Watch" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out" data-alt="Monochrome luxury photograph of a sleek obsidian minimalist dress watch with ultra-thin matte black case, sunburst anthracite dial with subtle warm gold indices, paired with a black supple calfskin strap against dark architectural slate and soft chiaroscuro side lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4MfaNnggI4Z34Y7x29hTWaC4zr-WhsJBv5JlK9gDCKrvPyLFfiRUGoW_m7_UBCJuJIcgEukGWaaNTJ2iVKhVmq8mQ7gxTsGEi8gE0hvR6nS-Ncq3YSKFVPo9_pLjxlADWQ9hH4xvPtBrX9Jjv33XbUuk0KLi5NqrjZkcMUDQDZAvG_7NhRff1w56LV2tsjV1pYun4R2o_QhBfeHtSEOuYt4hbQCU15htd-TDF_stWafoZI8EbSUSc"/>
+<div class="absolute top-2 left-2 flex flex-col gap-1 items-start z-10">
+<span class="px-1.5 py-0.5 bg-surface-container-lowest/90 text-tertiary font-label-caps text-[9px] uppercase tracking-widest font-bold backdrop-blur-sm rounded-sm">
+            NEW
+          </span>
+<span class="px-1.5 py-0.5 bg-surface-container text-on-surface-variant font-label-caps text-[9px] font-bold rounded-sm">
+            -24%
+          </span>
+</div>
+<button aria-label="Add to Wishlist" class="wishlist-btn absolute top-2 right-2 w-7 h-7 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm text-on-surface-variant hover:text-primary flex items-center justify-center transition-colors active:scale-90 z-10">
+<span class="material-symbols-outlined text-[16px]">favorite</span>
+</button>
+<div class="absolute bottom-2 inset-x-2 flex justify-center opacity-95">
+<button class="add-bag-btn w-full h-7 bg-primary text-on-primary font-label-caps text-[10px] uppercase font-bold tracking-wider rounded flex items-center justify-center gap-1 active:bg-secondary transition-colors">
+<span class="material-symbols-outlined text-[13px]">shopping_bag</span>
+<span>Quick Bag</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col p-2.5 flex-1 justify-between gap-1">
+<div>
+<div class="flex items-center gap-1 text-[11px] text-tertiary">
+<span class="material-symbols-outlined text-[13px] fill-current" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold font-body-sm text-on-surface text-[11px]">4.8</span>
+<span class="text-outline text-[10px]">(112)</span>
+</div>
+<h2 class="font-headline-sm text-[13px] leading-tight text-on-surface font-semibold line-clamp-2 mt-0.5">
+            Obsidian Minimalist Dress Watch
+          </h2>
+</div>
+<div class="flex flex-col pt-1">
+<div class="flex items-baseline gap-1.5">
+<span class="font-price-md text-price-md text-primary font-bold">₹9,400</span>
+<span class="font-body-sm text-outline line-through text-[11px]">₹12,500</span>
+</div>
+<span class="font-label-caps text-[9px] text-outline uppercase tracking-wider mt-0.5">6.8mm Ultra-Slim Case</span>
+</div>
+</div>
+</article>
+<!-- PRODUCT 3 -->
+<article class="group relative flex flex-col bg-surface-container-low rounded overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="relative w-full aspect-[4/5] bg-surface-container-lowest overflow-hidden">
+<img alt="Vanguard Vintage Pilot GMT" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out" data-alt="Overhead macro still life shot of a Vanguard Vintage Pilot GMT timepiece featuring a weathered bronze bezel, luminous vintage ecru numerals, red dual-time hand, and a heavy rugged olive-tan leather aviator strap resting on antiqued brass instruments and dark wood background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWgykTk57Z5nKbgQv6wXNzYteXRst9_9k4g1bg6TSMP6-rk0XGmKvw5Rn7ogTg1w0vGY5GOKtQOuc1sh6eQjygeU0l7pg7R46O8H6Fs0_bpTj3jRKvoueOTnqnqw3KXQ3P1-wJjGlZTMcXB6tGaG-9IBSgexG6a1jWbnfbQ4fDwiU8TXXXL-Xdd5hIkaIOd-fTAUgBpTKdg1A_i2WG1ourpVxWY9j5bdp4PUTM66gaTTTGr-0fhqWR"/>
+<div class="absolute top-2 left-2 flex flex-col gap-1 items-start z-10">
+<span class="px-1.5 py-0.5 bg-surface-container-lowest/90 text-primary font-label-caps text-[9px] uppercase tracking-widest font-bold backdrop-blur-sm rounded-sm">
+            EXCLUSIVE
+          </span>
+<span class="px-1.5 py-0.5 bg-secondary-container text-on-secondary font-label-caps text-[9px] font-bold rounded-sm">
+            -23%
+          </span>
+</div>
+<button aria-label="Add to Wishlist" class="wishlist-btn absolute top-2 right-2 w-7 h-7 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm text-on-surface-variant hover:text-primary flex items-center justify-center transition-colors active:scale-90 z-10">
+<span class="material-symbols-outlined text-[16px]">favorite</span>
+</button>
+<div class="absolute bottom-2 inset-x-2 flex justify-center opacity-95">
+<button class="add-bag-btn w-full h-7 bg-primary text-on-primary font-label-caps text-[10px] uppercase font-bold tracking-wider rounded flex items-center justify-center gap-1 active:bg-secondary transition-colors">
+<span class="material-symbols-outlined text-[13px]">shopping_bag</span>
+<span>Quick Bag</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col p-2.5 flex-1 justify-between gap-1">
+<div>
+<div class="flex items-center gap-1 text-[11px] text-tertiary">
+<span class="material-symbols-outlined text-[13px] fill-current" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold font-body-sm text-on-surface text-[11px]">5.0</span>
+<span class="text-outline text-[10px]">(36)</span>
+</div>
+<h2 class="font-headline-sm text-[13px] leading-tight text-on-surface font-semibold line-clamp-2 mt-0.5">
+            Vanguard Vintage Pilot GMT
+          </h2>
+</div>
+<div class="flex flex-col pt-1">
+<div class="flex items-baseline gap-1.5">
+<span class="font-price-md text-price-md text-primary font-bold">₹21,500</span>
+<span class="font-body-sm text-outline line-through text-[11px]">₹28,000</span>
+</div>
+<span class="font-label-caps text-[9px] text-tertiary uppercase tracking-wider mt-0.5">Dual Timezone • 200m WR</span>
+</div>
+</div>
+</article>
+<!-- PRODUCT 4 -->
+<article class="group relative flex flex-col bg-surface-container-low rounded overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="relative w-full aspect-[4/5] bg-surface-container-lowest overflow-hidden">
+<img alt="Titanium Skeleton Mechanical" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out" data-alt="Detailed artistic macro studio shot of an open-worked titanium skeleton mechanical watch showing intricate gold and ruthenium gear trains, ruby balance jewel, brushed grade 5 titanium case, integrated textured rubber-leather strap under high-contrast dramatic spotlight on dark titanium plate." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBG__X_XH7XKplKIrtp5IHpXvPGwomUtGVVeGPf0mubdUtm8TWGc5bXxrtXI0NsgRE4wFqf7XdPqjWfIEmshwAXsNk-hl1I5RfJTD0KhJUn4Wi0hU8LmJvYG5p1kFaJbc3MNR7G1mJzgggS6hn3WTU6RmffcuKD4Lt20bsg4d-0qcMXqpIygIi68jSrWPsaCkUzo6cGj-HL4iyTUIi5fR2huQnXtfyhLuexYN-A43_7Ur5G6ttM-M1U"/>
+<div class="absolute top-2 left-2 flex flex-col gap-1 items-start z-10">
+<span class="px-1.5 py-0.5 bg-surface-container-lowest/90 text-primary font-label-caps text-[9px] uppercase tracking-widest font-bold backdrop-blur-sm rounded-sm">
+            MASTERPIECE
+          </span>
+<span class="px-1.5 py-0.5 bg-secondary-container text-on-secondary font-label-caps text-[9px] font-bold rounded-sm">
+            -23%
+          </span>
+</div>
+<button aria-label="Add to Wishlist" class="wishlist-btn absolute top-2 right-2 w-7 h-7 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm text-on-surface-variant hover:text-primary flex items-center justify-center transition-colors active:scale-90 z-10">
+<span class="material-symbols-outlined text-[16px]">favorite</span>
+</button>
+<div class="absolute bottom-2 inset-x-2 flex justify-center opacity-95">
+<button class="add-bag-btn w-full h-7 bg-primary text-on-primary font-label-caps text-[10px] uppercase font-bold tracking-wider rounded flex items-center justify-center gap-1 active:bg-secondary transition-colors">
+<span class="material-symbols-outlined text-[13px]">shopping_bag</span>
+<span>Quick Bag</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col p-2.5 flex-1 justify-between gap-1">
+<div>
+<div class="flex items-center gap-1 text-[11px] text-tertiary">
+<span class="material-symbols-outlined text-[13px] fill-current" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold font-body-sm text-on-surface text-[11px]">4.9</span>
+<span class="text-outline text-[10px]">(59)</span>
+</div>
+<h2 class="font-headline-sm text-[13px] leading-tight text-on-surface font-semibold line-clamp-2 mt-0.5">
+            Titanium Skeleton Mechanical
+          </h2>
+</div>
+<div class="flex flex-col pt-1">
+<div class="flex items-baseline gap-1.5">
+<span class="font-price-md text-price-md text-primary font-bold">₹32,000</span>
+<span class="font-body-sm text-outline line-through text-[11px]">₹42,000</span>
+</div>
+<span class="font-label-caps text-[9px] text-tertiary uppercase tracking-wider mt-0.5">Skeletonized Calibre</span>
+</div>
+</div>
+</article>
+<!-- PRODUCT 5 -->
+<article class="group relative flex flex-col bg-surface-container-low rounded overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="relative w-full aspect-[4/5] bg-surface-container-lowest overflow-hidden">
+<img alt="Royal Navy Marine Chronometer" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out" data-alt="Sophisticated product photograph of a Royal Navy Marine Chronometer watch with deep midnight blue enamel dial, polished steel roman numerals, blued hands, coin-edge bezel detail, and a handcrafted saddle-stitched cognac bridle leather strap placed on wet dark slate." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwoYy_Ltv_hVMSnkfZK_kuvQiISEJDRmrLjMp6vR6tpTVzud7x-Om9EQmCXnSFNGdH2Uqil-yK04YgEr3JY7HqOSiAQbq28gD0kct3rib0WXQOrgoNeA87uK39T22p78e7nyTMvr6AqE5VpD4bhPt_PGzx-KxNJy9aZLW8AxMTgIBSPJWAeFvjflN5muHl6MSkE3UphIWvtiRcI1UbPQEi0rr9Pzk4UPB4NNVD24QwgrHtE-EGTaOz"/>
+<div class="absolute top-2 left-2 flex flex-col gap-1 items-start z-10">
+<span class="px-1.5 py-0.5 bg-surface-container text-on-surface-variant font-label-caps text-[9px] font-bold rounded-sm">
+            -21%
+          </span>
+</div>
+<button aria-label="Add to Wishlist" class="wishlist-btn absolute top-2 right-2 w-7 h-7 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm text-on-surface-variant hover:text-primary flex items-center justify-center transition-colors active:scale-90 z-10">
+<span class="material-symbols-outlined text-[16px]">favorite</span>
+</button>
+<div class="absolute bottom-2 inset-x-2 flex justify-center opacity-95">
+<button class="add-bag-btn w-full h-7 bg-primary text-on-primary font-label-caps text-[10px] uppercase font-bold tracking-wider rounded flex items-center justify-center gap-1 active:bg-secondary transition-colors">
+<span class="material-symbols-outlined text-[13px]">shopping_bag</span>
+<span>Quick Bag</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col p-2.5 flex-1 justify-between gap-1">
+<div>
+<div class="flex items-center gap-1 text-[11px] text-tertiary">
+<span class="material-symbols-outlined text-[13px] fill-current" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold font-body-sm text-on-surface text-[11px]">4.7</span>
+<span class="text-outline text-[10px]">(91)</span>
+</div>
+<h2 class="font-headline-sm text-[13px] leading-tight text-on-surface font-semibold line-clamp-2 mt-0.5">
+            Royal Navy Marine Chronometer
+          </h2>
+</div>
+<div class="flex flex-col pt-1">
+<div class="flex items-baseline gap-1.5">
+<span class="font-price-md text-price-md text-primary font-bold">₹14,200</span>
+<span class="font-body-sm text-outline line-through text-[11px]">₹18,000</span>
+</div>
+<span class="font-label-caps text-[9px] text-outline uppercase tracking-wider mt-0.5">High-Accuracy Quartz</span>
+</div>
+</div>
+</article>
+<!-- PRODUCT 6 -->
+<article class="group relative flex flex-col bg-surface-container-low rounded overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="relative w-full aspect-[4/5] bg-surface-container-lowest overflow-hidden">
+<img alt="Matte Black Field Specialist" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out" data-alt="Editorial product picture of a tactical matte black field watch with high-contrast white Arabic numerals, 24-hour inner track, DLC coated stainless steel case, sapphire crystal, and durable black ballistic nylon NATO strap lying on textured dark charcoal felt cloth." src="https://lh3.googleusercontent.com/aida-public/AB6AXuATMa86BrMh0Mvk6ryYRRo-7Qke8gbHaudCQVfQ2wJ7iNHpV_vE802tyd1riKH2XDR_RnsMIb_29mIJRWc6aByFGLMaJcYLNDZHcZcWXY1fgS7-_AFVRnIUbSETvKmVhbluU07eiyK8_qItBpMhHb_IHgvbUFQ-bVVhr5zi-xgO4czY6Gh2775EUcVDkKjXRkklWzjAztpfdSvcBLCiXAGNcr5_dBnYXVsPStxp1rmhSlTY8OB8fyEm"/>
+<div class="absolute top-2 left-2 flex flex-col gap-1 items-start z-10">
+<span class="px-1.5 py-0.5 bg-surface-container-lowest/90 text-tertiary font-label-caps text-[9px] uppercase tracking-widest font-bold backdrop-blur-sm rounded-sm">
+            BESTSELLER
+          </span>
+<span class="px-1.5 py-0.5 bg-secondary-container text-on-secondary font-label-caps text-[9px] font-bold rounded-sm">
+            -22%
+          </span>
+</div>
+<button aria-label="Add to Wishlist" class="wishlist-btn absolute top-2 right-2 w-7 h-7 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm text-on-surface-variant hover:text-primary flex items-center justify-center transition-colors active:scale-90 z-10">
+<span class="material-symbols-outlined text-[16px]">favorite</span>
+</button>
+<div class="absolute bottom-2 inset-x-2 flex justify-center opacity-95">
+<button class="add-bag-btn w-full h-7 bg-primary text-on-primary font-label-caps text-[10px] uppercase font-bold tracking-wider rounded flex items-center justify-center gap-1 active:bg-secondary transition-colors">
+<span class="material-symbols-outlined text-[13px]">shopping_bag</span>
+<span>Quick Bag</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col p-2.5 flex-1 justify-between gap-1">
+<div>
+<div class="flex items-center gap-1 text-[11px] text-tertiary">
+<span class="material-symbols-outlined text-[13px] fill-current" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold font-body-sm text-on-surface text-[11px]">4.8</span>
+<span class="text-outline text-[10px]">(64)</span>
+</div>
+<h2 class="font-headline-sm text-[13px] leading-tight text-on-surface font-semibold line-clamp-2 mt-0.5">
+            Matte Black Field Specialist
+          </h2>
+</div>
+<div class="flex flex-col pt-1">
+<div class="flex items-baseline gap-1.5">
+<span class="font-price-md text-price-md text-primary font-bold">₹8,500</span>
+<span class="font-body-sm text-outline line-through text-[11px]">₹11,000</span>
+</div>
+<span class="font-label-caps text-[9px] text-outline uppercase tracking-wider mt-0.5">DLC Matte Shield • 100m</span>
+</div>
+</div>
+</article>
+</main>
+<!-- Atelier Guarantee Ribbon -->
+<section class="mt-8 mx-margin p-4 rounded bg-surface-container-low flex flex-col gap-3">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[20px]">verified</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface font-semibold">5-Year International Atelier Warranty</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Each watch arrives in laser-etched walnut vitrine with certified chronometer paper.</span>
+</div>
+</div>
+</section>
+<!-- Floating Refine & Filter Action Pill (Pinned Bottom Center) -->
+<div class="fixed bottom-24 inset-x-0 flex justify-center z-40 pointer-events-none">
+<button class="pointer-events-auto shadow-2xl h-11 px-5 rounded-full bg-primary text-on-primary font-label-caps text-label-caps font-bold uppercase tracking-widest flex items-center gap-2 transform active:scale-95 transition-all" id="floatingFilterBtn">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+<span>Refine &amp; Filter (3)</span>
+</button>
+</div>
+<!-- Filter & Refinement Drawer Modal (Backdrop + Bottom Sheet) -->
+<div class="hidden fixed inset-0 z-50 flex flex-col justify-end bg-black/75 backdrop-blur-sm transition-opacity" id="filterModal">
+<div class="bg-surface-container-low rounded-t-2xl max-h-[751px] flex flex-col overflow-hidden shadow-2xl">
+<!-- Drawer Handle & Header -->
+<div class="px-margin pt-3 pb-3 bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">tune</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Refine Selection</span>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center" id="closeFilterBtn">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<!-- Drawer Scrollable Content -->
+<div class="overflow-y-auto p-margin flex flex-col gap-5">
+<!-- Price Range -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface font-bold">Price Spectrum</span>
+<span class="font-body-sm text-tertiary font-semibold">₹1,999 — ₹45,000</span>
+</div>
+<div class="h-2 w-full bg-surface-container-highest rounded-full relative overflow-hidden">
+<div class="absolute left-[15%] right-[10%] top-0 bottom-0 bg-primary rounded-full"></div>
+</div>
+<div class="flex items-center justify-between text-outline text-[11px] font-body-sm">
+<span>₹1,999</span>
+<span>₹25,000</span>
+<span>₹45,000+</span>
+</div>
+</div>
+<!-- Material Criteria -->
+<div class="flex flex-col gap-2">
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface font-bold">Atelier Materials</span>
+<div class="grid grid-cols-2 gap-2">
+<label class="flex items-center gap-2 p-2 bg-surface-container rounded cursor-pointer">
+<input checked="" class="w-4 h-4 accent-primary rounded bg-surface" type="checkbox"/>
+<span class="text-body-sm font-body-sm text-on-surface">Stainless Steel (316L)</span>
+</label>
+<label class="flex items-center gap-2 p-2 bg-surface-container rounded cursor-pointer">
+<input checked="" class="w-4 h-4 accent-primary rounded bg-surface" type="checkbox"/>
+<span class="text-body-sm font-body-sm text-on-surface">Sapphire Glass</span>
+</label>
+<label class="flex items-center gap-2 p-2 bg-surface-container rounded cursor-pointer">
+<input class="w-4 h-4 accent-primary rounded bg-surface" type="checkbox"/>
+<span class="text-body-sm font-body-sm text-on-surface">Grade 5 Titanium</span>
+</label>
+<label class="flex items-center gap-2 p-2 bg-surface-container rounded cursor-pointer">
+<input checked="" class="w-4 h-4 accent-primary rounded bg-surface" type="checkbox"/>
+<span class="text-body-sm font-body-sm text-on-surface">Horween Leather</span>
+</label>
+</div>
+</div>
+<!-- Rating Minimum -->
+<div class="flex flex-col gap-2">
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface font-bold">Client Review Rating</span>
+<div class="flex gap-2">
+<button class="flex-1 py-1.5 px-2 bg-primary text-on-primary rounded font-label-caps text-[11px] font-bold uppercase flex items-center justify-center gap-1">
+<span>4★ &amp; Above</span>
+</button>
+<button class="flex-1 py-1.5 px-2 bg-surface-container text-on-surface-variant rounded font-label-caps text-[11px] font-medium uppercase flex items-center justify-center gap-1">
+<span>4.5★ &amp; Above</span>
+</button>
+<button class="flex-1 py-1.5 px-2 bg-surface-container text-on-surface-variant rounded font-label-caps text-[11px] font-medium uppercase flex items-center justify-center gap-1">
+<span>All Watches</span>
+</button>
+</div>
+</div>
+<!-- Movement Type -->
+<div class="flex flex-col gap-2">
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface font-bold">Movement Calibre</span>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-container-highest text-primary font-label-caps text-label-caps uppercase rounded">Automatic Self-Winding</span>
+<span class="px-3 py-1 bg-surface-container text-on-surface-variant font-label-caps text-label-caps uppercase rounded">Manual Skeleton</span>
+<span class="px-3 py-1 bg-surface-container text-on-surface-variant font-label-caps text-label-caps uppercase rounded">Chronometer Quartz</span>
+</div>
+</div>
+</div>
+<!-- Action Footer -->
+<div class="p-margin bg-surface-container flex items-center gap-3">
+<button class="py-3 px-4 rounded text-outline font-label-caps text-label-caps uppercase tracking-wider font-semibold" id="resetFilters">
+          Reset
+        </button>
+<button class="flex-1 h-12 bg-primary text-on-primary rounded font-label-caps text-label-caps uppercase font-bold tracking-widest active:bg-secondary flex items-center justify-center shadow-lg" id="applyFilters">
+          Show 48 Timepieces
+        </button>
+</div>
+</div>
+</div>
+<!-- Interactive Client-side Script -->
+<script>
+    (function() {
+      // Filter Modal Toggle
+      const openFilterBtn = document.getElementById('openFilterBtn');
+      const floatingFilterBtn = document.getElementById('floatingFilterBtn');
+      const closeFilterBtn = document.getElementById('closeFilterBtn');
+      const applyFilters = document.getElementById('applyFilters');
+      const filterModal = document.getElementById('filterModal');
+
+      const toggleModal = (show) => {
+        if (!filterModal) return;
+        if (show) {
+          filterModal.classList.remove('hidden');
+        } else {
+          filterModal.classList.add('hidden');
+        }
+      };
+
+      if (openFilterBtn) openFilterBtn.addEventListener('click', () => toggleModal(true));
+      if (floatingFilterBtn) floatingFilterBtn.addEventListener('click', () => toggleModal(true));
+      if (closeFilterBtn) closeFilterBtn.addEventListener('click', () => toggleModal(false));
+      if (applyFilters) applyFilters.addEventListener('click', () => toggleModal(false));
+
+      // Close modal on outside click
+      if (filterModal) {
+        filterModal.addEventListener('click', (e) => {
+          if (e.target === filterModal) toggleModal(false);
+        });
+      }
+
+      // Sort Menu Toggle
+      const sortDropdownTrigger = document.getElementById('sortDropdownTrigger');
+      const sortMenu = document.getElementById('sortMenu');
+      const currentSortLabel = document.getElementById('currentSortLabel');
+
+      if (sortDropdownTrigger && sortMenu) {
+        sortDropdownTrigger.addEventListener('click', (e) => {
+          e.stopPropagation();
+          sortMenu.classList.toggle('hidden');
+        });
+
+        const sortOptions = sortMenu.querySelectorAll('button');
+        sortOptions.forEach(btn => {
+          btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const val = btn.getAttribute('data-sort');
+            if (currentSortLabel) currentSortLabel.textContent = val;
+            sortMenu.classList.add('hidden');
+          });
+        });
+
+        document.addEventListener('click', () => {
+          sortMenu.classList.add('hidden');
+        });
+      }
+
+      // Wishlist Heart Micro-Interaction
+      const wishlistBtns = document.querySelectorAll('.wishlist-btn');
+      wishlistBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          const icon = btn.querySelector('.material-symbols-outlined');
+          const isFilled = icon.style.fontVariationSettings.includes("'FILL' 1");
+          if (isFilled) {
+            icon.style.fontVariationSettings = "'FILL' 0";
+            btn.classList.remove('text-primary');
+            btn.classList.add('text-on-surface-variant');
+          } else {
+            icon.style.fontVariationSettings = "'FILL' 1";
+            btn.classList.add('text-primary');
+            btn.classList.remove('text-on-surface-variant');
+          }
+        });
+      });
+
+      // Quick Add to Bag Micro-Interaction
+      const addBagBtns = document.querySelectorAll('.add-bag-btn');
+      addBagBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          const originalText = btn.innerHTML;
+          btn.innerHTML = '<span class="material-symbols-outlined text-[13px] animate-spin">check_circle</span> Added';
+          btn.classList.remove('bg-primary', 'text-on-primary');
+          btn.classList.add('bg-tertiary-container', 'text-on-tertiary-container');
+          setTimeout(() => {
+            btn.innerHTML = originalText;
+            btn.classList.add('bg-primary', 'text-on-primary');
+            btn.classList.remove('bg-tertiary-container', 'text-on-tertiary-container');
+          }, 1500);
+        });
+      });
+    })();
+  </script>
+</div></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface-container-lowest/95 backdrop-blur-xl shadow-[0_-4px_24px_rgba(0,0,0,0.7)]" data-active-classes="text-primary font-semibold"><div class="flex justify-around items-center h-20 px-space-xs"><a class="flex flex-col items-center justify-center gap-1 w-16 h-16 text-on-surface-variant transition-colors" data-path="home" href="#"><span class="material-symbols-outlined text-[22px]">home</span><span class="font-label-caps text-[10px] uppercase tracking-wider">Home</span></a><a aria-current="page" class="flex flex-col items-center justify-center gap-1 w-16 h-16 transition-colors text-primary font-semibold" data-path="shop" href="#"><span class="material-symbols-outlined text-[22px]">grid_view</span><span class="font-label-caps text-[10px] uppercase tracking-wider">Shop</span></a><a class="flex flex-col items-center justify-center gap-1 w-16 h-16 text-on-surface-variant transition-colors" data-path="wishlist" href="#"><span class="material-symbols-outlined text-[22px]">favorite</span><span class="font-label-caps text-[10px] uppercase tracking-wider">Wishlist</span></a><a class="flex flex-col items-center justify-center gap-1 w-16 h-16 text-on-surface-variant transition-colors" data-path="bag" href="#"><span class="material-symbols-outlined text-[22px]">shopping_bag</span><span class="font-label-caps text-[10px] uppercase tracking-wider">Bag</span></a><a class="flex flex-col items-center justify-center gap-1 w-16 h-16 text-on-surface-variant transition-colors" data-path="account" href="#"><span class="material-symbols-outlined text-[22px]">person</span><span class="font-label-caps text-[10px] uppercase tracking-wider">Account</span></a></div></nav></body></html>
