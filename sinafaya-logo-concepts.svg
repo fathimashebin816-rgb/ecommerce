@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Sinafaya Logo Concepts - 3 Directions -->
+<!-- Copy individual <svg> blocks into separate files for use -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="1200" height="400">
+  <!-- CONCEPT 1: WOVEN MONOGRAM - Interlocking S+F as continuous thread -->
+  <g id="concept-1" transform="translate(50, 50)">
+    <!-- Mark: S+F woven knot -->
+    <svg viewBox="0 0 120 120" width="120" height="120">
+      <defs>
+        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#C97B6B"/>   <!-- Peach evolved -->
+          <stop offset="100%" style="stop-color:#A65E4D"/> <!-- Deeper terracotta -->
+        </linearGradient>
+      </defs>
+      <!-- S stroke -->
+      <path d="M60,15 C30,15 15,35 15,60 C15,85 30,105 60,105 C85,105 95,90 95,65" 
+            fill="none" stroke="url(#grad1)" stroke-width="8" stroke-linecap="round"/>
+      <!-- F stroke weaving through -->
+      <path d="M95,25 L35,25 M35,25 L35,95 M35,60 L80,60" 
+            fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+      <!-- Overlap highlights -->
+      <circle cx="35" cy="25" r="4" fill="url(#grad1)"/>
+      <circle cx="35" cy="60" r="4" fill="url(#grad1)"/>
+      <circle cx="60" cy="65" r="4" fill="#FFFFFF"/>
+    </svg>
+    
+    <!-- Wordmark -->
+    <text x="140" y="85" font-family="'DM Sans', 'Inter', sans-serif" font-weight="400" 
+          font-size="48" fill="#2D2D2D" letter-spacing="2">Sinafaya</text>
+    <text x="140" y="115" font-family="'DM Sans', 'Inter', sans-serif" font-weight="300" 
+          font-size="14" fill="#8B7355" letter-spacing="4" text-transform="uppercase">Indian Wear Reimagined</text>
+  </g>
+
+  <!-- CONCEPT 2: FLAME PETAL - S+F forming abstract flame/petal -->
+  <g id="concept-2" transform="translate(450, 50)">
+    <svg viewBox="0 0 120 120" width="120" height="120">
+      <defs>
+        <linearGradient id="grad2" x1="0%" y1="100%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:#D4A574"/>   <!-- Warm sand -->
+          <stop offset="50%" style="stop-color:#C97B6B"/>  <!-- Peach -->
+          <stop offset="100%" style="stop-color:#E8B87D"/> <!-- Gold highlight -->
+        </linearGradient>
+      </defs>
+      <!-- Unified S+F form: flame petal -->
+      <path d="M60,10 
+               C90,10 105,35 105,60 
+               C105,85 90,110 60,110 
+               C35,110 20,85 20,60 
+               C20,35 35,10 60,10 Z" 
+            fill="url(#grad2)"/>
+      <!-- Negative space S -->
+      <path d="M60,25 C40,25 28,40 28,58 C28,75 40,90 58,90 C72,90 82,78 82,62" 
+            fill="#FFFFFF"/>
+      <!-- Negative space F crossbar -->
+      <rect x="38" y="55" width="28" height="6" rx="3" fill="#FFFFFF"/>
+      <!-- Negative space F stem top -->
+      <rect x="40" y="28" width="6" height="30" rx="3" fill="#FFFFFF"/>
+    </svg>
+    
+    <text x="540" y="85" font-family="'Playfair Display', 'Cormorant Garamond', serif" font-weight="400" 
+          font-size="48" fill="#2D2D2D" letter-spacing="1.5">Sinafaya</text>
+    <text x="540" y="115" font-family="'DM Sans', 'Inter', sans-serif" font-weight="400" 
+          font-size="13" fill="#A65E4D" letter-spacing="3" text-transform="uppercase">Drape • Craft • Wear</text>
+  </g>
+
+  <!-- CONCEPT 3: MINIMAL GEOMETRIC - S+F as architectural corner -->
+  <g id="concept-3" transform="translate(850, 50)">
+    <svg viewBox="0 0 120 120" width="120" height="120">
+      <defs>
+        <linearGradient id="grad3" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" style="stop-color:#2D2D2D"/>
+          <stop offset="100%" style="stop-color:#4A3F3A"/>
+        </linearGradient>
+      </defs>
+      <!-- S as vertical spine -->
+      <path d="M40,20 C40,10 50,10 50,20 L50,55 C50,65 40,65 40,75 L40,100" 
+            fill="none" stroke="url(#grad3)" stroke-width="10" stroke-linecap="round"/>
+      <!-- F as horizontal arms -->
+      <path d="M25,45 L70,45 M25,75 L55,75" 
+            fill="none" stroke="url(#grad3)" stroke-width="10" stroke-linecap="round"/>
+      <!-- Connection point -->
+      <circle cx="40" cy="45" r="5" fill="#C97B6B"/>
+      <circle cx="40" cy="75" r="5" fill="#C97B6B"/>
+    </svg>
+    
+    <text x="940" y="85" font-family="'Space Grotesk', 'DM Sans', sans-serif" font-weight="500" 
+          font-size="48" fill="#2D2D2D" letter-spacing="0">SINAF<span style="color:#C97B6B">A</span>Y<span style="color:#C97B6B">A</span></text>
+    <text x="940" y="115" font-family="'Space Grotesk', 'DM Sans', sans-serif" font-weight="300" 
+          font-size="12" fill="#4A3F3A" letter-spacing="5" text-transform="uppercase">est. 2026</text>
+  </g>
+
+  <!-- Color swatches reference -->
+  <g id="palette" transform="translate(50, 220)">
+    <rect x="0" y="0" width="60" height="40" fill="#C97B6B"/><text x="30" y="65" text-anchor="middle" font-size="11" fill="#4A3F3A">Primary Peach</text>
+    <rect x="80" y="0" width="60" height="40" fill="#A65E4D"/><text x="110" y="65" text-anchor="middle" font-size="11" fill="#4A3F3A">Deep Terracotta</text>
+    <rect x="160" y="0" width="60" height="40" fill="#D4A574"/><text x="190" y="65" text-anchor="middle" font-size="11" fill="#4A3F3A">Warm Sand</text>
+    <rect x="240" y="0" width="60" height="40" fill="#E8B87D"/><text x="270" y="65" text-anchor="middle" font-size="11" fill="#4A3F3A">Gold Accent</text>
+    <rect x="320" y="0" width="60" height="40" fill="#2D2D2D"/><text x="350" y="65" text-anchor="middle" font-size="11" fill="#E8B87D">Charcoal</text>
+    <rect x="400" y="0" width="60" height="40" fill="#4A3F3A"/><text x="430" y="65" text-anchor="middle" font-size="11" fill="#E8B87D">Dark Taupe</text>
+    <rect x="480" y="0" width="60" height="40" fill="#F5F0EB"/><text x="510" y="65" text-anchor="middle" font-size="11" fill="#4A3F3A">Cream Base</text>
+    <rect x="560" y="0" width="60" height="40" fill="#FFFFFF"/><text x="590" y="65" text-anchor="middle" font-size="11" fill="#4A3F3A">White</text>
+  </g>
+</svg>

@@ -1,71 +1,76 @@
 "use client";
 
-import { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
+import { createContext, useContext, useState, useCallback, ReactNode } from "react";
 import { products } from "@/lib/products";
 
-type Cart = Record<string, number>;
-type StoreContextValue = {
-  cart: Cart;
+interface StoreContextType {
+  cart: Record<string, number>;
   ready: boolean;
+  add: (productId: string) => void;
+  remove: (productId: string) => void;
+  setQuantity: (productId: string, qty: number) => void;
   count: number;
   subtotal: number;
-  add: (id: string, amount?: number) => void;
-  setQuantity: (id: string, amount: number) => void;
-  remove: (id: string) => void;
-  clear: () => void;
-};
+}
 
-const StoreContext = createContext<StoreContextValue | null>(null);
-const STORAGE_KEY = "vanguard-atelier-cart-v1";
+const StoreContext = createContext<StoreContextType | undefined>(undefined);
 
-export function StoreProvider({ children }: { children: React.ReactNode }) {
-  const [cart, setCart] = useState<Cart>({});
+export function StoreProvider({ children }: { children: ReactNode }) {
+  const [cart, setCart] = useState<Record<string, number>>({});
   const [ready, setReady] = useState(false);
 
-  useEffect(() => {
+  if (typeof window !== "undefined" && !ready) {
     try {
-      const saved = localStorage.getItem(STORAGE_KEY);
-      if (saved) {
-        const parsed = JSON.parse(saved) as Cart;
-        setCart(Object.fromEntries(Object.entries(parsed).filter(([id, amount]) => products.some((product) => product.id === id) && Number.isFinite(amount) && amount > 0)));
-      }
-    } catch {
-      localStorage.removeItem(STORAGE_KEY);
-    }
+      const stored = window.localStorage.getItem("twt-cart");
+      if (stored) setCart(JSON.parse(stored));
+    } catch {}
     setReady(true);
-  }, []);
+  }
 
-  useEffect(() => {
-    if (ready) localStorage.setItem(STORAGE_KEY, JSON.stringify(cart));
-  }, [cart, ready]);
-
-  const add = useCallback((id: string, amount = 1) => {
-    setCart((current) => ({ ...current, [id]: (current[id] ?? 0) + amount }));
-  }, []);
-  const setQuantity = useCallback((id: string, amount: number) => {
-    setCart((current) => {
-      if (amount <= 0) {
-        const next = { ...current };
-        delete next[id];
-        return next;
-      }
-      return { ...current, [id]: Math.min(amount, 99) };
+  const add = useCallback((productId: string) => {
+    setCart((prev) => {
+      const next = { ...prev, [productId]: (prev[productId] ?? 0) + 1 };
+      if (typeof window !== "undefined") window.localStorage.setItem("twt-cart", JSON.stringify(next));
+      return next;
     });
   }, []);
-  const remove = useCallback((id: string) => setQuantity(id, 0), [setQuantity]);
-  const clear = useCallback(() => setCart({}), []);
 
-  const value = useMemo(() => {
-    const count = Object.values(cart).reduce((total, amount) => total + amount, 0);
-    const subtotal = products.reduce((total, product) => total + product.price * (cart[product.id] ?? 0), 0);
-    return { cart, ready, count, subtotal, add, setQuantity, remove, clear };
-  }, [cart, ready, add, setQuantity, remove, clear]);
+  const remove = useCallback((productId: string) => {
+    setCart((prev) => {
+      const next = { ...prev };
+      delete next[productId];
+      if (typeof window !== "undefined") window.localStorage.setItem("twt-cart", JSON.stringify(next));
+      return next;
+    });
+  }, []);
 
-  return <StoreContext.Provider value={value}>{children}</StoreContext.Provider>;
+  const setQuantity = useCallback((productId: string, qty: number) => {
+    setCart((prev) => {
+      const next = { ...prev };
+      if (qty <= 0) delete next[productId];
+      else next[productId] = qty;
+      if (typeof window !== "undefined") window.localStorage.setItem("twt-cart", JSON.stringify(next));
+      return next;
+    });
+  }, []);
+
+  const count = Object.values(cart).reduce((sum, qty) => sum + qty, 0);
+  const subtotal = Object.entries(cart).reduce((sum, [id, qty]) => {
+    const product = products.find((p) => p.id === id);
+    return sum + (product ? product.price * qty : 0);
+  }, 0);
+
+  return (
+    <StoreContext.Provider value={{ cart, ready, add, remove, setQuantity, count, subtotal }}>
+      {children}
+    </StoreContext.Provider>
+  );
 }
 
 export function useStore() {
-  const value = useContext(StoreContext);
-  if (!value) throw new Error("useStore must be used within StoreProvider");
-  return value;
+  const context = useContext(StoreContext);
+  if (!context) {
+    throw new Error("useStore must be used within a StoreProvider");
+  }
+  return context;
 }

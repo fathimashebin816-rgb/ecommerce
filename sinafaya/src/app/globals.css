@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 24 10% 10%;
+    --primary: 340 35% 28%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 30 20% 92%;
+    --secondary-foreground: 24 10% 10%;
+    --muted: 30 20% 96%;
+    --muted-foreground: 24 5% 45%;
+    --accent: 30 20% 92%;
+    --accent-foreground: 24 10% 10%;
+    --border: 30 15% 88%;
+    --ring: 340 35% 28%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-ivory text-black font-sans antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-8 py-3 text-sm font-medium text-ivory bg-espresso border border-espresso hover:bg-burgundy hover:border-burgundy transition-all duration-300 ease-out;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-8 py-3 text-sm font-medium text-espresso bg-transparent border border-espresso hover:bg-espresso hover:text-ivory transition-all duration-300 ease-out;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center px-6 py-2 text-sm font-medium text-espresso hover:text-burgundy transition-colors duration-200;
+  }
+
+  .product-card {
+    @apply group relative bg-ivory overflow-hidden transition-all duration-500 hover:shadow-lg;
+  }
+
+  .product-card-image {
+    @apply relative aspect-[3/4] overflow-hidden;
+  }
+
+  .product-card-image img {
+    @apply w-full h-full object-cover transition-transform duration-500 group-hover:scale-105;
+  }
+
+  .category-card {
+    @apply relative aspect-[4/5] overflow-hidden cursor-pointer;
+  }
+
+  .category-card img {
+    @apply w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-110;
+  }
+
+  .category-card-overlay {
+    @apply absolute inset-0 bg-black/10 transition-opacity duration-300 hover:bg-black/20 flex items-center justify-center;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 text-sm bg-ivory border border-beige focus:border-espresso focus:outline-none focus:ring-1 focus:ring-espresso transition-all duration-200;
+  }
+
+  .link-underline {
+    @apply relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-current after:scale-x-0 after:origin-bottom-right hover:after:scale-x-100 after:origin-bottom-left transition-transform duration-300;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .animation-delay-100 {
+    animation-delay: 100ms;
+  }
+
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .animation-delay-300 {
+    animation-delay: 300ms;
+  }
+
+  .animation-delay-500 {
+    animation-delay: 500ms;
+  }
+}

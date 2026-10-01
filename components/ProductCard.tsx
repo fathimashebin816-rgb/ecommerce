@@ -21,7 +21,7 @@ export function ProductCard({ product }: { product: Product }) {
     <div className="product-info">
       <div className="product-category">{product.category}</div>
       <Link href={`/product?id=${product.id}`}><h3 className="product-title">{product.name}</h3></Link>
-      <div className="product-rating">★★★★★ <span style={{ color: "var(--muted)" }}>· Made for the long run</span></div>
+      <div className="product-rating">★★★★★ <span style={{ color: "var(--muted)" }}>· Clean label</span></div>
       <div className="product-bottom"><span className="product-price">{formatPrice(product.price)}</span><button className="add-small" onClick={addToBag}>{added ? "Added ✓" : "Add to bag"}</button></div>
     </div>
   </article>;

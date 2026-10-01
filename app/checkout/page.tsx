@@ -5,6 +5,8 @@ import { FormEvent, useMemo, useState } from "react";
 import { useStore } from "@/components/StoreProvider";
 import { formatPrice, products } from "@/lib/products";
 
+const FREE_SHIPPING_THRESHOLD = 999;
+
 const paymentOptions = [
   { id: "upi", label: "UPI", detail: "Google Pay, PhonePe, Paytm and other UPI apps" },
   { id: "card", label: "Credit or debit card", detail: "Visa, Mastercard, RuPay and other major cards" },
@@ -17,7 +19,7 @@ export default function CheckoutPage() {
   const [payment, setPayment] = useState("upi");
   const [sent, setSent] = useState(false);
   const items = useMemo(() => products.filter((product) => (cart[product.id] ?? 0) > 0), [cart]);
-  const delivery = subtotal === 0 || subtotal >= 9999 ? 0 : 199;
+  const delivery = subtotal === 0 || subtotal >= FREE_SHIPPING_THRESHOLD ? 0 : 75;
   const total = subtotal + delivery;
 
   const sendOrder = (event: FormEvent<HTMLFormElement>) => {
@@ -33,12 +35,12 @@ export default function CheckoutPage() {
     const paymentLabel = paymentOptions.find((option) => option.id === payment)?.label ?? payment;
     const orderLines = items.map((item) => `• ${item.name} × ${cart[item.id]} — ${formatPrice(item.price * cart[item.id])}`).join("\n");
     const message = [
-      "Hello Vanguard Atelier, I would like to place this order:",
+      "Hello sinafaya, I would like to place this order:",
       "",
       orderLines,
       "",
       `Subtotal: ${formatPrice(subtotal)}`,
-      `Delivery: ${delivery === 0 ? "Complimentary" : formatPrice(delivery)}`,
+      `Delivery: ${delivery === 0 ? "Free" : formatPrice(delivery)}`,
       `Total: ${formatPrice(total)}`,
       "",
       `Name: ${name}`,
@@ -53,11 +55,11 @@ export default function CheckoutPage() {
     setSent(true);
   };
 
-  if (!ready) return <main className="container"><div className="page-intro"><div className="eyebrow">A considered checkout</div><h1 className="display">Your details</h1></div></main>;
-  if (items.length === 0) return <main className="container"><div className="page-intro"><div className="eyebrow">A considered checkout</div><h1 className="display">Your details</h1></div><div className="empty-state"><h2>Your bag is empty.</h2><p>Add a piece to your bag before checking out.</p><Link className="btn-primary" href="/shop">Browse the collection&nbsp; →</Link></div></main>;
+  if (!ready) return <main className="container"><div className="page-intro"><div className="eyebrow">Checkout</div><h1 className="display">Your details</h1></div></main>;
+  if (items.length === 0) return <main className="container"><div className="page-intro"><div className="eyebrow">Checkout</div><h1 className="display">Your details</h1></div><div className="empty-state"><h2>Your bag is empty.</h2><p>Add an item to your bag before checking out.</p><Link className="btn-primary" href="/shop">Browse collection&nbsp; →</Link></div></main>;
 
   return <main className="container">
-    <div className="page-intro"><div className="eyebrow">A considered checkout</div><h1 className="display">A few details, then it is yours.</h1><p>Your order and delivery details will be sent to our Atelier on WhatsApp so we can confirm everything with you.</p></div>
+    <div className="page-intro"><div className="eyebrow">Checkout</div><h1 className="display">A few details, then it's yours.</h1><p>Your order and delivery details will be sent to our team on WhatsApp so we can confirm everything with you.</p></div>
     <form className="checkout-layout" onSubmit={sendOrder}>
       <div className="checkout-form">
         <section className="form-section surface-card"><h2>Delivery details</h2><div className="form-grid">
@@ -77,7 +79,7 @@ export default function CheckoutPage() {
 
       <aside className="cart-aside surface-card"><h2>Your order</h2>
         <div className="checkout-order-lines">{items.map((item) => <div className="summary-line" key={item.id}><span>{item.name} × {cart[item.id]}</span><strong>{formatPrice(item.price * cart[item.id])}</strong></div>)}</div>
-        <div className="detail-divider" /><div className="summary-line"><span>Subtotal</span><span>{formatPrice(subtotal)}</span></div><div className="summary-line"><span>Insured delivery</span><span>{delivery ? formatPrice(delivery) : "Complimentary"}</span></div><div className="summary-line summary-total"><span>Total due</span><span>{formatPrice(total)}</span></div>
+        <div className="detail-divider" /><div className="summary-line"><span>Subtotal</span><span>{formatPrice(subtotal)}</span></div><div className="summary-line"><span>Delivery</span><span>{delivery ? formatPrice(delivery) : "Free"}</span></div><div className="summary-line summary-total"><span>Total due</span><span>{formatPrice(total)}</span></div>
         <button className="btn-primary" type="submit" style={{ width: "100%", marginTop: 12 }}>Send order on WhatsApp&nbsp; ↗</button>
         {sent && <p className="notice" role="status" style={{ marginTop: 12 }}>Your order details are ready in WhatsApp. Send the message there to confirm your order.</p>}
         <p style={{ color: "var(--muted)", fontSize: 10, lineHeight: 1.7, marginTop: 14 }}>No payment is collected on this page. Your selected payment method is sent with your order for confirmation.</p>
